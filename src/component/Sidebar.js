@@ -1,11 +1,13 @@
 import React ,{useState} from 'react'
 import {FaPlus} from 'react-icons/fa'
 import { v4 as uuidv4 } from 'uuid';
+import { BsSun,BsMoon } from "react-icons/bs";
 
 
 
 
-function Sidebar({setSitebar,itemList,updateItem}) {
+
+function Sidebar({setSitebar,itemList,updateItem,isDark,updateTheme}) {
     console.log(itemList)
     const [savedList,updateList]=useState([])
    console.log(savedList)
@@ -25,15 +27,23 @@ function Sidebar({setSitebar,itemList,updateItem}) {
         
 
     }
+    function changeTheme(){
+        console.log("clicked")
+        updateTheme(!isDark)
+    }
 
 
 
   return (
     
     <div className='sidebar-cont'>
-        <div className="sidebar-header">
+        <div className="sidebar-header" >
+            <button className='theme-btn'onClick={changeTheme}>
+                {isDark? <BsSun color="white" size="30px"/>:<BsMoon color="black" size="30px"/>}
+
+            </button>
             <button className='sidebar-button' onClick={updateSidebar}>
-                <FaPlus size="30px" color='white'/>
+                <FaPlus size="30px" color={isDark? "white":"black"}/>
             </button>
         </div>
         <div className='saved-list'>

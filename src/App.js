@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
   const [itemList,updateItem]=useState([])
+  const [isDark,updateTheme]=useState(true)
   const itemNameVal=useRef()
   const itemPriceVal=useRef()
 
@@ -71,9 +72,9 @@ function App() {
 
   return (
 
-    <div className="app-body">
+    <div className={isDark? "app-body":"app-body light-mode"}>
 
-      <Header itemList={itemList} updateItem={updateItem}/>
+      <Header itemList={itemList} updateItem={updateItem} isDark={isDark} updateTheme={updateTheme}/>
       <div className="item-container">
        <div className="item-list-header">
          <p>Item</p>

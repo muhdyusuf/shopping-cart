@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {FaBars} from 'react-icons/fa'
 import Sidebar from './Sidebar'
 
-function Header({itemList,updateItem}) {
+function Header({itemList,updateItem,isDark,updateTheme}) {
   const [sideBar,setSitebar]=useState(true)
 
   function showSidebar(){
@@ -16,7 +16,7 @@ function Header({itemList,updateItem}) {
   
 
   return (
-    <section className='header'>
+    <section className='header '>
       <div className='container'>
           <h1 className='header-title'>Counter App</h1>
         
@@ -26,7 +26,7 @@ function Header({itemList,updateItem}) {
           </button>
           <div className={sideBar? "sidebar active":"sidebar"} >
             <Sidebar setSitebar={setSitebar} itemList={itemList} updateItem={
-            updateItem}/>
+            updateItem} isDark={isDark} updateTheme={updateTheme}/>
           </div>
           </div>
       </div>
