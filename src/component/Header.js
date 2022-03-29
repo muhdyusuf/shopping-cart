@@ -3,7 +3,7 @@ import {FaBars} from 'react-icons/fa'
 import Sidebar from './Sidebar'
 
 function Header({itemList,updateItem,isDark,updateTheme}) {
-  const [sideBar,setSitebar]=useState(true)
+  const [sideBar,setSitebar]=useState(false)
 
   function showSidebar(){
     setSitebar(!sideBar)

@@ -8,9 +8,9 @@ import { BsSun,BsMoon } from "react-icons/bs";
 
 
 function Sidebar({setSitebar,itemList,updateItem,isDark,updateTheme}) {
-    console.log(itemList)
+    
     const [savedList,updateList]=useState([])
-   console.log(savedList)
+
 
     function updateSidebar(){
         setSitebar(state=>{
@@ -28,7 +28,6 @@ function Sidebar({setSitebar,itemList,updateItem,isDark,updateTheme}) {
 
     }
     function changeTheme(){
-        console.log("clicked")
         updateTheme(!isDark)
     }
 

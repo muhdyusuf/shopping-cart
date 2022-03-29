@@ -57,7 +57,7 @@ function App() {
     if( !itemName || !itemPrice) return
 
     updateItem(prevItem=>{
-      console.log(prevItem)
+      
       return [...prevItem,
         {id:uuidv4(),name:itemName,price:itemPrice,quantity:1,isRemoved:false}]
     })
