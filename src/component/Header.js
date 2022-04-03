@@ -18,7 +18,7 @@ function Header({itemList,updateItem,isDark,updateTheme}) {
   return (
     <section className='header '>
       <div className='container'>
-          <h1 className='header-title'>Counter App</h1>
+          <h1 className='header-title'>Shopping cart</h1>
         
         <div className='nav'>
           <button onClick={showSidebar} className="nav-button">
