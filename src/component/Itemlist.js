@@ -7,7 +7,7 @@ import React from 'react'
 
 
 
-function Itemlist({itemList,updateQuantity}) {
+function Itemlist({itemList,updateQuantity,isDark}) {
 
 
 
@@ -25,12 +25,12 @@ function Itemlist({itemList,updateQuantity}) {
         <p>{item.price}</p>
       </div>  
       <div className='quantity-cont'>
-          <button onClick={()=>updateItemQuantity(item.id,"minus")}className="btn-plus"><FaMinus color='white' size="10px"/></button> 
+          <button onClick={()=>updateItemQuantity(item.id,"minus")}className="btn-plus"><FaMinus color={isDark? "white":"black"} size="10px"/></button> 
          <div className='item-quantity'>
              <span>{item.quantity}</span>
          </div>
          
-          <button onClick={()=>updateItemQuantity(item.id,"plus")} className="btn-minus"><FaPlus color='white' size="10px"/></button> 
+          <button onClick={()=>updateItemQuantity(item.id,"plus")} className="btn-minus"><FaPlus color={isDark? "white":"black"} size="10px"/></button> 
 
         </div>
       </div>
