@@ -82,7 +82,7 @@ function App() {
          <p>Quantity</p>
        </div>
        <div className="item-list">
-          <Itemlist itemList={itemList} updateQuantity={updateQuantity} isDark={isDark}/>
+          <Itemlist itemList={itemList} updateQuantity={updateQuantity}/>
        </div>
      
       </div>
